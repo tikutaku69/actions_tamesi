@@ -14,11 +14,11 @@ def check_odd_or_even(number):
         return "奇数"
 
 
-# 使用例
-if __name__ == "__main__":
-    try:
-        num = int(input("整数を入力してください: "))
-        result = check_odd_or_even(num)
-        print(f"{num}は{result}です。")
-    except ValueError:
-        print("整数を入力してください。")
+# # 使用例
+# if __name__ == "__main__":
+#     try:
+#         num = int(input("整数を入力してください: "))
+#         result = check_odd_or_even(num)
+#         print(f"{num}は{result}です。")
+#     except ValueError:
+#         print("整数を入力してください。")
