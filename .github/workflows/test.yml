@@ -10,4 +10,7 @@ jobs:
       - uses: actions/setup-python@v5      # ステップ2: 言語セットアップ
         with:
           python-version: '3.11'
-      - run: python -u src/*.py # ステップ3: テストの実行
+      - name: Run Python script
+        env:
+          PYTHONUNBUFFERED: 1
+        run: python src/*.py # ステップ3: テストの実行
