@@ -10,4 +10,4 @@ jobs:
       - uses: actions/setup-python@v5      # ステップ2: 言語セットアップ
         with:
           python-version: '3.11'
-      - run: python test src/*.py # ステップ3: テストの実行
+      - run: python src/*.py # ステップ3: テストの実行
