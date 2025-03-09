@@ -2,6 +2,7 @@ import unittest
 from main import check_odd_or_even
 
 def test_check_odd_or_even():
+    print("test_check_odd_or_evenを実行してる")
     assert check_odd_or_even(2) == "偶数"
     assert check_odd_or_even(0) == "偶数"
     assert check_odd_or_even(-4) == "偶数"

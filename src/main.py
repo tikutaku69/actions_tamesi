@@ -8,6 +8,7 @@ def check_odd_or_even(number):
     Returns:
         str: "偶数" または "奇数" の文字列
     """
+    print("check_odd_or_even関数を実行してる")
     if number % 2 == 0:
         return "偶数"
     else:
