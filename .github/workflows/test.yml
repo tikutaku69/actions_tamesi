@@ -11,4 +11,4 @@ jobs:
         with:
           python-version: '3.11'
       - name: Run test_main.py
-        run: python test -u src/*.py # ステップ3: テストの実行
+        run: python -u src/test_*.py # ステップ3: テストの実行
