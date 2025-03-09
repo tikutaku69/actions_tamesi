@@ -1,0 +1,14 @@
+name: Test
+on:
+  pull_request:                        # プルリクエストが作成されたら起動
+    paths: ['src/*.py']              # ただしpyのファイル変更時のみ
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4      # ステップ1: チェックアウト
+      - uses: actions/setup-python@v5      # ステップ2: 言語セットアップ
+        with:
+          python-version: '3.11'
+      - name: Run test_main.py
+        run: python -u src/test_*.py # ステップ3: テストの実行
