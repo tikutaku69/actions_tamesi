@@ -1,14 +1,21 @@
 name: Test
 on:
   pull_request:                        # プルリクエストが作成されたら起動
-    paths: ['src/*.py']              # ただしpyのファイル変更時のみ
+    # paths: ['src/*.py']              # ただしpyのファイル変更時のみ
+defaults:                                         # デフォルトシェル
+  run:
+    shell: bash
+concurrency:                                      # 古いワークフローの自動キャンセル
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 1             # タイムアウト
     steps:
       - uses: actions/checkout@v4      # ステップ1: チェックアウト
       - uses: actions/setup-python@v5      # ステップ2: 言語セットアップ
         with:
           python-version: '3.11'
-      - name: Run test_main.py
-        run: python -u src/test_*.py # ステップ3: テストの実行
+      - name: Run test_judge.py
+        run: python tests/*.py # ステップ3: テストの実行
