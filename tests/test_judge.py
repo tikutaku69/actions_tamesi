@@ -1,5 +1,9 @@
 import unittest
-from main import check_odd_or_even
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+from judge import check_odd_or_even
 
 def test_check_odd_or_even():
     print("test_check_odd_or_evenを実行してる")
