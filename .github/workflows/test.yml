@@ -18,4 +18,4 @@ jobs:
         with:
           python-version: '3.11'
       - name: Run test_judge.py
-        run: python -u tests/test_*.py # ステップ3: テストの実行
+        run: python -u tests/*.py # ステップ3: テストの実行
