@@ -59,3 +59,4 @@ if __name__ == "__main__":
     test_order()
     test_even_number()
     print("全てのテストが成功しました。")
+    print("プルリクのためだけに追加")
