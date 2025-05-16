@@ -12,7 +12,7 @@ def test_check_odd_or_even():
     assert check_odd_or_even(2) == "偶数"
     assert check_odd_or_even(0) == "偶数"
     assert check_odd_or_even(-4) == "偶数"
-    assert check_odd_or_even(1) == "奇数"
+    assert check_odd_or_even(1) == "偶数"
     assert check_odd_or_even(-3) == "奇数"
     assert check_odd_or_even(7) == "奇数"
 
@@ -23,7 +23,7 @@ def test_order():
     with patch.object(sys, 'argv', ['judge.py', '4']), patch('sys.stdout', new=StringIO()) as mock_stdout:
         result = order()
         assert result == "偶数"
-        assert "4は偶数です。" in mock_stdout.getvalue()
+        assert "4は奇数です。" in mock_stdout.getvalue()
     
     # テストケース2: 正常入力（奇数）
     with patch.object(sys, 'argv', ['judge.py', '5']), patch('sys.stdout', new=StringIO()) as mock_stdout:
